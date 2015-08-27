@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AAD-RG-lzD">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Contacts Table View Controller-->
@@ -55,38 +54,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieD-VN-22Q">
-                                <rect key="frame" x="16" y="95" width="52" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="52" id="ZPn-ms-SZe"/>
-                                    <constraint firstAttribute="height" constant="21" id="zeU-jL-jD1"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Edr-8Y-P3t">
-                                <rect key="frame" x="16" y="131" width="119" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="119" id="2dq-aq-3pn"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H9E-RQ-VTY">
+                                <rect key="frame" x="16" y="90" width="412" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="csQ-0Q-Br8">
+                                <rect key="frame" x="16" y="128" width="412" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="ieD-VN-22Q" firstAttribute="top" secondItem="KHE-tm-zvK" secondAttribute="bottom" constant="31" id="FDE-8E-glY"/>
-                            <constraint firstItem="Edr-8Y-P3t" firstAttribute="top" secondItem="ieD-VN-22Q" secondAttribute="bottom" constant="15" id="Rgn-22-BPL"/>
-                            <constraint firstItem="OOn-at-GYx" firstAttribute="top" secondItem="Edr-8Y-P3t" secondAttribute="bottom" constant="448" id="d1x-Xa-3pt"/>
-                            <constraint firstItem="Edr-8Y-P3t" firstAttribute="leading" secondItem="nOy-f7-vTc" secondAttribute="leadingMargin" id="iMw-Cp-J33"/>
-                            <constraint firstItem="ieD-VN-22Q" firstAttribute="leading" secondItem="Edr-8Y-P3t" secondAttribute="leading" id="nON-ET-1G9"/>
-                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="nameLabel" destination="ieD-VN-22Q" id="cFA-BP-yMP"/>
-                        <outlet property="phoneNumberLabel" destination="Edr-8Y-P3t" id="0Ke-vh-AvK"/>
+                        <outlet property="nameField" destination="H9E-RQ-VTY" id="p5k-vc-IJ6"/>
+                        <outlet property="phoneNumberField" destination="csQ-0Q-Br8" id="fJj-jT-7E9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ugx-9o-P9a" userLabel="First Responder" sceneMemberID="firstResponder"/>
